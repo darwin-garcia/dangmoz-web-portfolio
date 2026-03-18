@@ -13,7 +13,7 @@ export const metadata = {
 export default function Contact() {
   return (
     // Contenedor principal de la página
-    <main className="container mx-auto p-8">
+    <main className="container mx-auto px-8 pt-24 pb-8">
       
       {/* --- SECCIÓN 1: CONTENEDOR DE LAS DOS COLUMNAS --- */}
       {/* Este 'section' agrupa el formulario y la imagen para que funcionen como una sola unidad */}
@@ -21,7 +21,7 @@ export default function Contact() {
         
         {/* --- COLUMNA IZQUIERDA: FORMULARIO --- */}
         {/* Usamos 'md:w-1/2' para que en escritorio ocupe la mitad del espacio */}
-        <div className="w-full md:w-1/2">
+        <div className="w-full md:w-1/2 flex justify-center">
           <ContactForm />
         </div>
 

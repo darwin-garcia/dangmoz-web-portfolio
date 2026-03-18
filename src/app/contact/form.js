@@ -18,8 +18,8 @@ const ContactForm = () => {
 
   // Clases comunes para los campos de texto, ajustadas para modo claro y oscuro
   const inputClass = "w-full py-3 px-4 rounded-xl outline-none group resize-none h-48 " +
-                     "bg-white text-gray-900 " + // ESTILOS CLAROS PREDETERMINADOS (Modo Claro)
-                     "dark:bg-[#343434] dark:text-gray-100"; // ESTILOS OSCUROS (Modo Oscuro)
+                     "bg-white text-gray-900 border border-gray-300 " + // Modo Claro: Fondo blanco + borde gris
+                     "dark:bg-[#343434] dark:text-gray-100 dark:border-none"; // Modo Oscuro: Sin borde
 
   // Clases del contenedor principal (manteniendo el fondo blanco en modo claro)
   const articleClass = "register flex flex-col rounded-lg bg-white dark:bg-transparent";
