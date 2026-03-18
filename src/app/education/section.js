@@ -27,15 +27,17 @@ export default function EducationSection() {
                         <div className='prose max-w-none text-gray-500 dark:text-gray-300'>
                             <p>Data Science and AI School. The blog template supports posts in nested sub-folders. This can be used to group posts of similar content e.g. a multi-part course. This post is itself an example of a nested route!</p>
                         </div>
-                        <div className="w-full object-cover opacity-50 cursor-pointer filter grayscale hover:grayscale-0 transition duration-300 hover:opacity-100 ">
-                            <a href="https://www.coursera.org/account/accomplishments/specialization/JEI1DRMTQUEP">
-                            <Image 
-                            src="/images/degrees/IBM-DS-Degree.jpg" 
-                            alt="Degree-Image1"
-                            width={640}
-                            height={480}
-                            priority={false}
-                            className="w-full h-auto object-contain rounded-lg lg:max-w-[800px] lg:max-h-[600px]" /> 
+
+                        {/* Contenedor de imagen con efecto Blur y Grayscale */}
+                        <div className="w-full object-cover opacity-60 cursor-pointer filter grayscale blur-[1.5px] hover:grayscale-0 hover:blur-none hover:opacity-100 transition-all duration-500 ease-in-out">
+                            <a href="https://www.coursera.org/account/accomplishments/specialization/JEI1DRMTQUEP" target="_blank" rel="noopener noreferrer">
+                                <Image 
+                                    src="/images/degrees/IBM-DS-Degree.jpg" 
+                                    alt="Degree-Image"
+                                    width={640}
+                                    height={480}
+                                    className="w-full h-auto object-contain rounded-lg lg:max-w-[800px] lg:max-h-[600px] shadow-md hover:shadow-xl" 
+                                /> 
                             </a>
                         </div>
                     </div>                  
@@ -62,15 +64,17 @@ export default function EducationSection() {
                         <div className='prose max-w-none text-gray-500 dark:text-gray-300'>
                             <p>Web Development Bootcamp. The blog template supports posts in nested sub-folders. This can be used to group posts of similar content e.g. a multi-part course. This post is itself an example of a nested route!</p>
                         </div>
-                        <div className="w-full object-cover opacity-50 cursor-pointer filter grayscale hover:grayscale-0 transition duration-300 hover:opacity-100 ">
-                            <a href="https://app.aluracursos.com/degree/certificate/3c7a68f4-3018-4adc-a7be-05753451bbb4">
-                            <Image 
-                            src="/images/degrees/Oracle-Frontend-Degree.JPG" 
-                            alt="Degree-Image1"
-                            width={640}
-                            height={480}
-                            priority={false}
-                            className="w-full h-auto object-contain rounded-lg lg:max-w-[800px] lg:max-h-[600px]" /> 
+
+                        {/* Contenedor de imagen con efecto Blur y Grayscale */}
+                        <div className="w-full object-cover opacity-60 cursor-pointer filter grayscale blur-[1.5px] hover:grayscale-0 hover:blur-none hover:opacity-100 transition-all duration-500 ease-in-out">
+                            <a href="https://app.aluracursos.com/degree/certificate/3c7a68f4-3018-4adc-a7be-05753451bbb4" target="_blank" rel="noopener noreferrer">
+                                <Image 
+                                    src="/images/degrees/Oracle-Frontend-Degree.JPG" 
+                                    alt="Degree-Image"
+                                    width={640}
+                                    height={480}
+                                    className="w-full h-auto object-contain rounded-lg lg:max-w-[800px] lg:max-h-[600px] shadow-md hover:shadow-xl" 
+                                /> 
                             </a>
                         </div>
                     </div>                  
