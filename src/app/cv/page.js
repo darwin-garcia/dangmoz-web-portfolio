@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload, faMapPin, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faWhatsapp, faGithub, faLinkedin} from "@fortawesome/free-brands-svg-icons";
 
-const ImgUser = '/images/profile/1755223532651.jpg'
+const ImgUser = '/images/profile/Profile2.jpg'
 const CVRoute = '/docs/CV.pdf'
 
 export default function CVPage() {
@@ -37,9 +37,13 @@ export default function CVPage() {
             <Link
               href={CVRoute}
               download
-              className="inline-block mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition-colors"
+              className="inline-block mt-4 px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg shadow-md 
+                        transition-all duration-300 ease-in-out 
+                        hover:bg-blue-500 hover:shadow-[0_0_20px_rgba(37,99,235,0.5)] 
+                        active:scale-95"
             >
-              <FontAwesomeIcon icon = {faDownload} className="text-xl" /> Download PDF
+              <FontAwesomeIcon icon={faDownload} className="mr-2 text-xl" /> 
+              Download PDF
             </Link>
           </section>
           {/* Sección habilidades en la columna izquierda */}
@@ -51,17 +55,28 @@ export default function CVPage() {
             </ul>
           </section>
           {/* Sección habilidades en la columna izquierda */}
+          {/* Sección habilidades en la columna izquierda */}
           <section className="mt-10">
             <h2 className="text-2xl font-semibold border-b-2 border-blue-500 pb-2 mb-4">
               Skills
             </h2>
             <div className="flex flex-wrap gap-2 justify-center md:justify-start">
-              {["Python", "SQL", "Git", "Linux", "PowerBI", "Excel"].map((skill) => (
+              {/* Definimos los estilos específicos para cada tecnología */}
+              {[
+                { name: "Python", color: "hover:bg-green-500 hover:shadow-[0_0_15px_rgba(34,197,94,0.6)]" },
+                { name: "SQL", color: "hover:bg-blue-500 hover:shadow-[0_0_15px_rgba(59,130,246,0.6)]" },
+                { name: "Git", color: "hover:bg-orange-600 hover:shadow-[0_0_15px_rgba(234,88,12,0.6)]" },
+                { name: "Linux", color: "hover:bg-blue-900 hover:shadow-[0_0_15px_rgba(30,58,138,0.6)]" },
+                { name: "PowerBI", color: "hover:bg-yellow-400 hover:shadow-[0_0_15px_rgba(250,204,21,0.6)]" },
+                { name: "Excel", color: "hover:bg-emerald-800 hover:shadow-[0_0_15px_rgba(6,78,59,0.6)]" },
+              ].map((skill) => (
                 <span
-                  key={skill}
-                  className="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm"
+                  key={skill.name}
+                  className={`px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm cursor-default
+                    transition-all duration-300 ease-in-out hover:text-white
+                    ${skill.color}`}
                 >
-                  {skill}
+                  {skill.name}
                 </span>
               ))}
             </div>
@@ -160,5 +175,4 @@ export default function CVPage() {
       </div>
     </main>
   );
-
 }
